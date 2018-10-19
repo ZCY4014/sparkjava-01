@@ -11,10 +11,13 @@ import static spark.Spark.port;
 public class SparkDemo01 {
 
     public static void main(String[] args) {
+	    
+	    	String html = "<h1><a href='/hello'>Hello</a> World!</h1>\n" +
+    "<p>This web app is powered by \n" +
+    "<a href='https://github.com/mygithubid/sparkjava-01'>this github repo</a></p>\n";
 
 		System.out.println("About to set the port...");
-		
-        port(getHerokuAssignedPort());
+		port(getHerokuAssignedPort());
 		
 		System.out.println("");
 		System.out.println("(Don't worry about the warnings below about SLF4J... we'll deal with those later)");
@@ -26,7 +29,7 @@ public class SparkDemo01 {
 		spark.Spark.get("/nihao", (req, res) -> "<b>Ni Hao</b>\n");
 
 		spark.Spark.get("/hola", (req, res) -> "<b>¡Hola!</b>\n");
-		spark.Spark.get("/", (req, res) -> "<h1>Yo</h1>\n");
+		spark.Spark.get("/", (req, res) -> html);
 
 	}
 	
