@@ -14,7 +14,7 @@ public class SparkDemo01 {
 	    
 	    	String html = "<h1><a href='/hello'>Hello</a> World!</h1>\n" +
     "<p>This web app is powered by \n" +
-    "<a href='https://github.com/mygithubid/sparkjava-01'>this github repo</a></p>\n";
+    "<a href='https://github.com/zcy4014/sparkjava-01'>this github repo</a></p>\n";
 
 		System.out.println("About to set the port...");
 		port(getHerokuAssignedPort());
