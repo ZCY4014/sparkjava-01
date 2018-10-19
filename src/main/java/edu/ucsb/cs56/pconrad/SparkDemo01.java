@@ -30,6 +30,8 @@ public class SparkDemo01 {
 
 		spark.Spark.get("/hola", (req, res) -> "<b>¡Hola!</b>\n");
 		spark.Spark.get("/", (req, res) -> html);
+	    
+	    	spark.Spark.get("/hello", (req, res) -> "<p><b>Hello, World!</b>  You just clicked the first link on my web app.</p>");
 
 	}
 	
